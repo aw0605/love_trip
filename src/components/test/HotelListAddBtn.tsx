@@ -1,15 +1,15 @@
-import { collection, doc, writeBatch } from 'firebase/firestore'
+import { doc, collection, writeBatch } from 'firebase/firestore'
 import { store } from '@remote/firebase'
 import { COLLECTIONS } from '@constants'
 import Button from '@shared/Button'
 
-import { EVENTS, HOTEL, HOTEL_NAMES, IMAGES, ROOMS } from '@/mock/data'
+import { HOTEL_NAMES, IMAGES, HOTEL, EVENTS, ROOMS } from '@/mock/data'
 
 function random(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function HotelListAddBtn() {
+function HotelListAddButton() {
   const batch = writeBatch(store)
 
   const handleBtnClick = () => {
@@ -19,7 +19,7 @@ function HotelListAddBtn() {
         mainImageUrl: IMAGES[Math.floor(Math.random() * IMAGES.length)],
         images: IMAGES,
         price: random(130000, 200000),
-        star: random(1, 5),
+        starRating: random(1, 5),
         ...HOTEL,
         ...(EVENTS[idx] != null && { events: EVENTS[idx] }),
       }
@@ -32,14 +32,14 @@ function HotelListAddBtn() {
 
       ROOMS.forEach((room) => {
         const subDocRef = doc(collection(hotelDocRef, COLLECTIONS.ROOM))
-
         batch.set(subDocRef, room)
       })
     })
+
     batch.commit()
   }
 
   return <Button onClick={handleBtnClick}>호텔 리스트 추가</Button>
 }
 
-export default HotelListAddBtn
+export default HotelListAddButton
