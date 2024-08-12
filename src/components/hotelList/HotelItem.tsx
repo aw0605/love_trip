@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import { differenceInMilliseconds, parseISO } from 'date-fns'
-import { Hotel as IHotel } from '@models/hotel'
+import { Hotel } from '@models/hotel'
 import ListRow from '@shared/ListRow'
 import Flex from '@shared/Flex'
 import Text from '@shared/Text'
@@ -12,7 +12,7 @@ import formatTime from '@utils/formatTime'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function Hotel({ hotel }: { hotel: IHotel }) {
+function HotelItem({ hotel }: { hotel: Hotel }) {
   const [remainTime, setRemainTime] = useState(0)
 
   useEffect(() => {
@@ -105,4 +105,4 @@ const imageStyels = css`
   margin: 0 0 5px 15px;
 `
 
-export default Hotel
+export default HotelItem
