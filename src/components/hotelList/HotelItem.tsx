@@ -1,18 +1,30 @@
+import { useEffect, useState, MouseEvent } from 'react'
+import { Link } from 'react-router-dom'
 import { css } from '@emotion/react'
 import { differenceInMilliseconds, parseISO } from 'date-fns'
-import { Hotel } from '@models/hotel'
 import ListRow from '@shared/ListRow'
 import Flex from '@shared/Flex'
 import Text from '@shared/Text'
 import Spacing from '@shared/Spacing'
 import Tag from '@shared/Tag'
-
 import addDelimiter from '@utils/addDelimiter'
 import formatTime from '@utils/formatTime'
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 
-function HotelItem({ hotel }: { hotel: Hotel }) {
+import { Hotel } from '@models/hotel'
+
+function HotelItem({
+  hotel,
+  onLike,
+  isLike,
+}: {
+  hotel: Hotel
+  onLike: ({
+    hotel,
+  }: {
+    hotel: Pick<Hotel, 'name' | 'id' | 'mainImageUrl'>
+  }) => void
+  isLike: boolean
+}) {
   const [remainTime, setRemainTime] = useState(0)
 
   useEffect(() => {
@@ -40,6 +52,17 @@ function HotelItem({ hotel }: { hotel: Hotel }) {
       clearInterval(timer)
     }
   }, [hotel.events])
+
+  const handleLike = (e: MouseEvent<HTMLImageElement>) => {
+    e.preventDefault()
+    onLike({
+      hotel: {
+        name: hotel.name,
+        mainImageUrl: hotel.mainImageUrl,
+        id: hotel.id,
+      },
+    })
+  }
 
   const tagComponent = () => {
     if (hotel.events == null) {
@@ -77,11 +100,25 @@ function HotelItem({ hotel }: { hotel: Hotel }) {
             </Flex>
           }
           right={
-            <Flex direction="column" align="flex-end">
+            <Flex
+              direction="column"
+              align="flex-end"
+              style={{ position: 'relative' }}
+            >
               <img
                 src={hotel.mainImageUrl}
                 alt={hotel.name}
                 css={imageStyels}
+              />
+              <img
+                src={
+                  isLike
+                    ? 'https://cdn4.iconfinder.com/data/icons/twitter-29/512/166_Heart_Love_Like_Twitter-64.png'
+                    : 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-heart-outline-64.png'
+                }
+                alt="찜하기"
+                css={iconHeartStyles}
+                onClick={handleLike}
               />
               <Text bold={true}>{addDelimiter(hotel.price)}원</Text>
             </Flex>
@@ -103,6 +140,14 @@ const imageStyels = css`
   border-radius: 8px;
   object-fit: cover;
   margin: 0 0 5px 15px;
+`
+
+const iconHeartStyles = css`
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 30px;
+  height: 30px;
 `
 
 export default HotelItem
