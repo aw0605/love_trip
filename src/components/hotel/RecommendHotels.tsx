@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { css } from '@emotion/react'
 import useRecommendHotels from './hooks/useRecommendHotels'
-import addDelimiter from '@/utils/addDelimiter'
+import addDelimiter from '@utils/addDelimiter'
 import Text from '@shared/Text'
 import Spacing from '@shared/Spacing'
 import ListRow from '@shared/ListRow'

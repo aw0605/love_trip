@@ -1,9 +1,9 @@
 import { Fragment } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import useHotels from '@components/hotelList/hooks/useHotels'
-import Top from '@components/shared/Top'
+import Top from '@shared/Top'
+import Spacing from '@shared/Spacing'
 import HotelItme from '@components/hotelList/HotelItem'
-import Spacing from '@components/shared/Spacing'
 
 function HotelListPage() {
   const { data: hotels, hasNextPage, loadMore } = useHotels()

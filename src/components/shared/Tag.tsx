@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Colors, colors } from '@/styles/colorPalette'
+import { Colors, colors } from '@styles/colorPalette'
 
 interface TagProps {
   fontSize?: string

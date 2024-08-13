@@ -6,7 +6,7 @@ import Rooms from '@components/hotel/Rooms'
 import Contents from '@components/hotel/Contents'
 import Map from '@components/hotel/Map'
 import RecommendHotels from '@components/hotel/RecommendHotels'
-import ActionBtns from '@/components/hotel/ActionBtns'
+import ActionBtns from '@components/hotel/ActionBtns'
 
 function HotelPage() {
   const { id } = useParams() as { id: string }

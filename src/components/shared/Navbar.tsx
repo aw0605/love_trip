@@ -5,21 +5,29 @@ import Button from './Button'
 import Flex from './Flex'
 
 import { colors } from '@styles/colorPalette'
+import useUser from '@hooks/auth/useUser'
 
 function Navbar() {
   const location = useLocation()
   const showSignBtn =
     ['/signup', '/signin'].includes(location.pathname) === false
 
-  // todo
-  const user = null
+  const user = useUser()
 
   const renderBtn = useCallback(() => {
     if (user != null) {
       return (
         <Link to="/my">
-          {/* todo */}
-          <img src="" alt="임시 이미지" />
+          <img
+            src={
+              user.photoURL ??
+              'https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-128.png'
+            }
+            alt={`${user.displayName}의 이미지`}
+            width={40}
+            height={40}
+            style={{ borderRadius: '100%' }}
+          />
         </Link>
       )
     }
