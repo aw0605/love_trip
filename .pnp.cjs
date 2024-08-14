@@ -41,6 +41,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:27.5.2"],\
           ["@types/node", "npm:16.18.105"],\
           ["@types/react", "npm:18.3.3"],\
+          ["@types/react-beautiful-dnd", "npm:13.1.5"],\
           ["@types/react-copy-to-clipboard", "npm:5.0.5"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["craco-alias", "npm:3.0.1"],\
@@ -53,6 +54,7 @@ const RAW_RUNTIME_STATE =
           ["firebase", "npm:10.4.0"],\
           ["prettier", "npm:3.0.3"],\
           ["react", "npm:18.3.1"],\
+          ["react-beautiful-dnd", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:13.1.1"],\
           ["react-copy-to-clipboard", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:5.1.0"],\
           ["react-dom", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:18.3.1"],\
           ["react-infinite-scroll-component", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:6.1.0"],\
@@ -6410,6 +6412,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/hoist-non-react-statics", [\
+      ["npm:3.3.5", {\
+        "packageLocation": "./.yarn/cache/@types-hoist-non-react-statics-npm-3.3.5-98b8d8e47b-2a3b64bf3d.zip/node_modules/@types/hoist-non-react-statics/",\
+        "packageDependencies": [\
+          ["@types/hoist-non-react-statics", "npm:3.3.5"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["hoist-non-react-statics", "npm:3.3.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/html-minifier-terser", [\
       ["npm:6.1.0", {\
         "packageLocation": "./.yarn/cache/@types-html-minifier-terser-npm-6.1.0-707ea07fcb-a62fb8588e.zip/node_modules/@types/html-minifier-terser/",\
@@ -6625,6 +6638,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/react-beautiful-dnd", [\
+      ["npm:13.1.5", {\
+        "packageLocation": "./.yarn/cache/@types-react-beautiful-dnd-npm-13.1.5-22fbd3f95f-edd04eaf3b.zip/node_modules/@types/react-beautiful-dnd/",\
+        "packageDependencies": [\
+          ["@types/react-beautiful-dnd", "npm:13.1.5"],\
+          ["@types/react", "npm:18.3.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/react-copy-to-clipboard", [\
       ["npm:5.0.5", {\
         "packageLocation": "./.yarn/cache/@types-react-copy-to-clipboard-npm-5.0.5-f40d40ac58-c50af5f84e.zip/node_modules/@types/react-copy-to-clipboard/",\
@@ -6641,6 +6664,19 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react", "npm:18.3.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/react-redux", [\
+      ["npm:7.1.33", {\
+        "packageLocation": "./.yarn/cache/@types-react-redux-npm-7.1.33-b668ae02f3-e17a2fea00.zip/node_modules/@types/react-redux/",\
+        "packageDependencies": [\
+          ["@types/react-redux", "npm:7.1.33"],\
+          ["@types/hoist-non-react-statics", "npm:3.3.5"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["redux", "npm:4.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9169,6 +9205,16 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/postcss",\
           "postcss"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["css-box-model", [\
+      ["npm:1.2.1", {\
+        "packageLocation": "./.yarn/cache/css-box-model-npm-1.2.1-d4e0001730-611e56d76b.zip/node_modules/css-box-model/",\
+        "packageDependencies": [\
+          ["css-box-model", "npm:1.2.1"],\
+          ["tiny-invariant", "npm:1.3.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -14431,6 +14477,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:27.5.2"],\
           ["@types/node", "npm:16.18.105"],\
           ["@types/react", "npm:18.3.3"],\
+          ["@types/react-beautiful-dnd", "npm:13.1.5"],\
           ["@types/react-copy-to-clipboard", "npm:5.0.5"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["craco-alias", "npm:3.0.1"],\
@@ -14443,6 +14490,7 @@ const RAW_RUNTIME_STATE =
           ["firebase", "npm:10.4.0"],\
           ["prettier", "npm:3.0.3"],\
           ["react", "npm:18.3.1"],\
+          ["react-beautiful-dnd", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:13.1.1"],\
           ["react-copy-to-clipboard", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:5.1.0"],\
           ["react-dom", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:18.3.1"],\
           ["react-infinite-scroll-component", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:6.1.0"],\
@@ -14733,6 +14781,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["memfs", "npm:3.6.0"],\
           ["fs-monkey", "npm:1.0.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["memoize-one", [\
+      ["npm:5.2.1", {\
+        "packageLocation": "./.yarn/cache/memoize-one-npm-5.2.1-ee0f8be979-fd22dbe9a9.zip/node_modules/memoize-one/",\
+        "packageDependencies": [\
+          ["memoize-one", "npm:5.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18024,6 +18081,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["raf-schd", [\
+      ["npm:4.0.3", {\
+        "packageLocation": "./.yarn/cache/raf-schd-npm-4.0.3-18f72af738-ecabf0957c.zip/node_modules/raf-schd/",\
+        "packageDependencies": [\
+          ["raf-schd", "npm:4.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["randombytes", [\
       ["npm:2.1.0", {\
         "packageLocation": "./.yarn/cache/randombytes-npm-2.1.0-e3da76bccf-50395efda7.zip/node_modules/randombytes/",\
@@ -18077,6 +18143,39 @@ const RAW_RUNTIME_STATE =
           ["raf", "npm:3.4.1"],\
           ["regenerator-runtime", "npm:0.13.11"],\
           ["whatwg-fetch", "npm:3.6.20"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-beautiful-dnd", [\
+      ["npm:13.1.1", {\
+        "packageLocation": "./.yarn/cache/react-beautiful-dnd-npm-13.1.1-ddc8adf565-5bc04f6dcf.zip/node_modules/react-beautiful-dnd/",\
+        "packageDependencies": [\
+          ["react-beautiful-dnd", "npm:13.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:13.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-beautiful-dnd-virtual-287b60d937/0/cache/react-beautiful-dnd-npm-13.1.1-ddc8adf565-5bc04f6dcf.zip/node_modules/react-beautiful-dnd/",\
+        "packageDependencies": [\
+          ["react-beautiful-dnd", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:13.1.1"],\
+          ["@babel/runtime", "npm:7.25.0"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["css-box-model", "npm:1.2.1"],\
+          ["memoize-one", "npm:5.2.1"],\
+          ["raf-schd", "npm:4.0.3"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:18.3.1"],\
+          ["react-redux", "virtual:287b60d937bdd2e85f730a7f8f6b262d5f9f95c10ebbe345d40f5f67bb9790690c0bf2018f9c8557eecd16d2dfb1243c87638e4202513cd8737879143926f49d#npm:7.2.9"],\
+          ["redux", "npm:4.2.1"],\
+          ["use-memo-one", "virtual:287b60d937bdd2e85f730a7f8f6b262d5f9f95c10ebbe345d40f5f67bb9790690c0bf2018f9c8557eecd16d2dfb1243c87638e4202513cd8737879143926f49d#npm:1.1.3"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18286,6 +18385,42 @@ const RAW_RUNTIME_STATE =
           ["match-sorter", "npm:6.3.4"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:18.3.1"],\
+          ["react-native", null]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react-native",\
+          "@types/react",\
+          "react-dom",\
+          "react-native",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-redux", [\
+      ["npm:7.2.9", {\
+        "packageLocation": "./.yarn/cache/react-redux-npm-7.2.9-612aa35519-904fac7f49.zip/node_modules/react-redux/",\
+        "packageDependencies": [\
+          ["react-redux", "npm:7.2.9"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:287b60d937bdd2e85f730a7f8f6b262d5f9f95c10ebbe345d40f5f67bb9790690c0bf2018f9c8557eecd16d2dfb1243c87638e4202513cd8737879143926f49d#npm:7.2.9", {\
+        "packageLocation": "./.yarn/__virtual__/react-redux-virtual-a83683e0d9/0/cache/react-redux-npm-7.2.9-612aa35519-904fac7f49.zip/node_modules/react-redux/",\
+        "packageDependencies": [\
+          ["react-redux", "virtual:287b60d937bdd2e85f730a7f8f6b262d5f9f95c10ebbe345d40f5f67bb9790690c0bf2018f9c8557eecd16d2dfb1243c87638e4202513cd8737879143926f49d#npm:7.2.9"],\
+          ["@babel/runtime", "npm:7.25.0"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/react-native", null],\
+          ["@types/react-redux", "npm:7.1.33"],\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["loose-envify", "npm:1.4.0"],\
+          ["prop-types", "npm:15.8.1"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:448108fcd0008d25333fd5002bfb18b484e77aa87dd4cc6594d7ec5ff9111c505041b2bd1909dd9282ddba66b343ae5b28bbfb35e3c22456e896861c0dd9972b#npm:18.3.1"],\
+          ["react-is", "npm:17.0.2"],\
           ["react-native", null]\
         ],\
         "packagePeers": [\
@@ -18530,6 +18665,16 @@ const RAW_RUNTIME_STATE =
           ["redent", "npm:3.0.0"],\
           ["indent-string", "npm:4.0.0"],\
           ["strip-indent", "npm:3.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["redux", [\
+      ["npm:4.2.1", {\
+        "packageLocation": "./.yarn/cache/redux-npm-4.2.1-e7e2cf2e37-136d98b3d5.zip/node_modules/redux/",\
+        "packageDependencies": [\
+          ["redux", "npm:4.2.1"],\
+          ["@babel/runtime", "npm:7.25.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20234,6 +20379,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["tiny-invariant", [\
+      ["npm:1.3.3", {\
+        "packageLocation": "./.yarn/cache/tiny-invariant-npm-1.3.3-e622f1447c-65af4a0732.zip/node_modules/tiny-invariant/",\
+        "packageDependencies": [\
+          ["tiny-invariant", "npm:1.3.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["tmpl", [\
       ["npm:1.0.5", {\
         "packageLocation": "./.yarn/cache/tmpl-npm-1.0.5-d399ba37e2-f935537799.zip/node_modules/tmpl/",\
@@ -20875,6 +21029,28 @@ const RAW_RUNTIME_STATE =
           ["url-parse", "npm:1.5.10"],\
           ["querystringify", "npm:2.2.0"],\
           ["requires-port", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["use-memo-one", [\
+      ["npm:1.1.3", {\
+        "packageLocation": "./.yarn/cache/use-memo-one-npm-1.1.3-b9dc77468a-3d596e65a6.zip/node_modules/use-memo-one/",\
+        "packageDependencies": [\
+          ["use-memo-one", "npm:1.1.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:287b60d937bdd2e85f730a7f8f6b262d5f9f95c10ebbe345d40f5f67bb9790690c0bf2018f9c8557eecd16d2dfb1243c87638e4202513cd8737879143926f49d#npm:1.1.3", {\
+        "packageLocation": "./.yarn/__virtual__/use-memo-one-virtual-613e2db0c5/0/cache/use-memo-one-npm-1.1.3-b9dc77468a-3d596e65a6.zip/node_modules/use-memo-one/",\
+        "packageDependencies": [\
+          ["use-memo-one", "virtual:287b60d937bdd2e85f730a7f8f6b262d5f9f95c10ebbe345d40f5f67bb9790690c0bf2018f9c8557eecd16d2dfb1243c87638e4202513cd8737879143926f49d#npm:1.1.3"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["react", "npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\

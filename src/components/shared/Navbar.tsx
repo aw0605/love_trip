@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { css } from '@emotion/react'
 import Button from './Button'
 import Flex from './Flex'
+import Spacing from './Spacing'
 
 import { colors } from '@styles/colorPalette'
 import useUser from '@hooks/auth/useUser'
@@ -17,18 +18,29 @@ function Navbar() {
   const renderBtn = useCallback(() => {
     if (user != null) {
       return (
-        <Link to="/my">
-          <img
-            src={
-              user.photoURL ??
-              'https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-128.png'
-            }
-            alt={`${user.displayName}의 이미지`}
-            width={40}
-            height={40}
-            style={{ borderRadius: '100%' }}
-          />
-        </Link>
+        <Flex align="center">
+          <Link to="/my">
+            <img
+              src={
+                user.photoURL ??
+                'https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-128.png'
+              }
+              alt={`${user.displayName}의 이미지`}
+              width={40}
+              height={40}
+              style={{ borderRadius: '100%' }}
+            />
+          </Link>
+          <Spacing size={15} direction="horizontal" />
+          <Link to="/settings">
+            <img
+              src="https://cdn1.iconfinder.com/data/icons/ionicons-outline-vol-2/512/settings-outline-64.png"
+              width={35}
+              height={35}
+              alt=""
+            />
+          </Link>
+        </Flex>
       )
     }
     if (showSignBtn) {
