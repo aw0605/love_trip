@@ -7,6 +7,7 @@ import Contents from '@components/hotel/Contents'
 import Map from '@components/hotel/Map'
 import RecommendHotels from '@components/hotel/RecommendHotels'
 import ActionBtns from '@components/hotel/ActionBtns'
+import Review from '@components/hotel/Review'
 
 function HotelPage() {
   const { id } = useParams() as { id: string }
@@ -28,6 +29,7 @@ function HotelPage() {
       <Contents contents={contents} />
       <Map location={location} />
       <RecommendHotels recommendHotels={recommendHotels} />
+      <Review hotelId={id} />
     </div>
   )
 }

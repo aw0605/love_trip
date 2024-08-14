@@ -1,7 +1,7 @@
-import FixedBottomBtn from '@/components/shared/FixedBottomBtn'
+import { useEffect, useState } from 'react'
 import useEditLike from '@components/settings/like/hooks/useEditLike'
+import FixedBottomBtn from '@shared/FixedBottomBtn'
 import ListRow from '@shared/ListRow'
-import { useCallback, useEffect, useState } from 'react'
 import {
   DragDropContext,
   Draggable,

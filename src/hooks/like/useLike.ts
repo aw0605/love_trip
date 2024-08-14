@@ -4,7 +4,7 @@ import { getLikes, toggleLike } from '@remote/like'
 import useUser from '@hooks/auth/useUser'
 import { useAlertContext } from '@contexts/AlertContext'
 
-import { Hotel } from '@/models/hotel'
+import { Hotel } from '@models/hotel'
 
 function useLike() {
   const user = useUser()
