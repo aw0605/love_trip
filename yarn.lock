@@ -3949,6 +3949,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/qs@npm:6.9.8":
+  version: 6.9.8
+  resolution: "@types/qs@npm:6.9.8"
+  checksum: 10c0/336358c279818ecedc0b4f9b29fd5052ff6e05dba3f10bad4534a4624819408d0b4710a4cdf8b58dff948dbdb1ca95a00e237189505ef1abfce0e6341eb18022
+  languageName: node
+  linkType: hard
+
 "@types/range-parser@npm:*":
   version: 1.2.7
   resolution: "@types/range-parser@npm:1.2.7"
@@ -10466,6 +10473,7 @@ __metadata:
     "@types/eslint": "npm:^8"
     "@types/jest": "npm:^27.0.1"
     "@types/node": "npm:^16.7.13"
+    "@types/qs": "npm:6.9.8"
     "@types/react": "npm:^18.0.0"
     "@types/react-beautiful-dnd": "npm:13.1.5"
     "@types/react-copy-to-clipboard": "npm:5.0.5"
@@ -10479,9 +10487,11 @@ __metadata:
     eslint-plugin-react: "npm:7.33.2"
     firebase: "npm:10.4.0"
     prettier: "npm:3.0.3"
+    qs: "npm:6.11.2"
     react: "npm:^18.3.1"
     react-beautiful-dnd: "npm:13.1.1"
     react-copy-to-clipboard: "npm:5.1.0"
+    react-day-picker: "npm:8.8.2"
     react-dom: "npm:^18.3.1"
     react-infinite-scroll-component: "npm:6.1.0"
     react-markdown: "npm:^9.0.1"
@@ -12993,6 +13003,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"qs@npm:6.11.2":
+  version: 6.11.2
+  resolution: "qs@npm:6.11.2"
+  dependencies:
+    side-channel: "npm:^1.0.4"
+  checksum: 10c0/4f95d4ff18ed480befcafa3390022817ffd3087fc65f146cceb40fc5edb9fa96cb31f648cae2fa96ca23818f0798bd63ad4ca369a0e22702fcd41379b3ab6571
+  languageName: node
+  linkType: hard
+
 "querystringify@npm:^2.1.1":
   version: 2.2.0
   resolution: "querystringify@npm:2.2.0"
@@ -13092,6 +13111,16 @@ __metadata:
   peerDependencies:
     react: ^15.3.0 || 16 || 17 || 18
   checksum: 10c0/de70d9f9c2d17cee207888ed791d4a042c300e5ca732503434d49e6745cff56c0d5ebcc82ab86237e9c2248e636d1d031b9f9cf9913ecec61d82a0e5ebc93881
+  languageName: node
+  linkType: hard
+
+"react-day-picker@npm:8.8.2":
+  version: 8.8.2
+  resolution: "react-day-picker@npm:8.8.2"
+  peerDependencies:
+    date-fns: ^2.28.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/2ec239cb3a800f2b6097cc5eecdae5d3023f26546da904f3169835ed4ea0c575fb8b22e83414178322df49124da0963e41bec9270375523a0ae4616843a62d84
   languageName: node
   linkType: hard
 

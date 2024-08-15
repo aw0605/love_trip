@@ -1,6 +1,10 @@
+import { useNavigate } from 'react-router-dom'
+import qs from 'qs'
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
+import useUser from '@hooks/auth/useUser'
 import useRooms from './hooks/useRooms'
+import { useAlertContext } from '@contexts/AlertContext'
 import addDelimiter from '@utils/addDelimiter'
 import Flex from '@shared/Flex'
 import Text from '@shared/Text'
@@ -11,6 +15,9 @@ import Button from '@shared/Button'
 
 function Rooms({ hotelId }: { hotelId: string }) {
   const { data: rooms } = useRooms({ hotelId })
+  const user = useUser()
+  const { open } = useAlertContext()
+  const navigate = useNavigate()
 
   return (
     <Container>
@@ -27,6 +34,13 @@ function Rooms({ hotelId }: { hotelId: string }) {
         {rooms?.map((room) => {
           const isDeadline = room.avaliableCount === 1
           const isSoldOut = room.avaliableCount === 0
+          const params = qs.stringify(
+            {
+              roomId: room.id,
+              hotelId,
+            },
+            { addQueryPrefix: true },
+          )
           return (
             <ListRow
               left={
@@ -55,7 +69,23 @@ function Rooms({ hotelId }: { hotelId: string }) {
                 />
               }
               right={
-                <Button size="medium" disabled={isSoldOut}>
+                <Button
+                  size="medium"
+                  disabled={isSoldOut}
+                  onClick={() => {
+                    if (user == null) {
+                      open({
+                        title: '로그인이 필요합니다.',
+                        onBtnClick: () => {
+                          navigate('/signin')
+                        },
+                      })
+                      return
+                    }
+
+                    navigate(`/schedule${params}`)
+                  }}
+                >
                   {isSoldOut ? '매진' : '선택'}
                 </Button>
               }

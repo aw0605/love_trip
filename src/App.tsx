@@ -10,6 +10,8 @@ import SignInPage from '@pages/SignIn'
 import MyPage from '@pages/My'
 import SettingsPage from '@pages/settings'
 import LikePage from '@pages/settings/like'
+import SchedulePage from '@pages/Schedule'
+import ReservationPage from '@pages/Reservation'
 
 function App() {
   useLoadKakao()
@@ -22,6 +24,22 @@ function App() {
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/" element={<HotelListPage />} />
           <Route path="/hotel/:id" element={<HotelPage />} />
+          <Route
+            path="/schedule"
+            element={
+              <PrivateRoute>
+                <SchedulePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/reservation"
+            element={
+              <PrivateRoute>
+                <ReservationPage />
+              </PrivateRoute>
+            }
+          />
           <Route
             path="/my"
             element={
