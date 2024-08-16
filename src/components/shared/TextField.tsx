@@ -10,12 +10,12 @@ import Input from './Input'
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: React.ReactNode
   hasError?: boolean
-  helpMsg?: React.ReactNode
+  helpMessage?: React.ReactNode
 }
 
 const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
   function TextField(
-    { label, hasError, helpMsg, onFocus, onBlur, ...props },
+    { label, hasError, helpMessage, onFocus, onBlur, ...props },
     ref,
   ) {
     const [focused, setFocused] = useState(false)
@@ -53,14 +53,14 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           {...props}
         />
 
-        {helpMsg ? (
+        {helpMessage ? (
           <Text
             typography="t7"
             color={labelColor}
             display="inline-block"
             style={{ marginTop: 6, fontSize: 12 }}
           >
-            {helpMsg}
+            {helpMessage}
           </Text>
         ) : null}
       </div>

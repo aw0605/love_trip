@@ -19,8 +19,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
 
 const BasicSelect = styled.select`
   height: 52px;
-  background-color: ${colors.gray};
-  border: none;
+  border: 1px solid ${colors.gray};
   border-radius: 10px;
   padding: 0 16px;
   cursor: pointer;
@@ -35,7 +34,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
   ref,
 ) {
   return (
-    <Flex direction="column" css={selectContainerStyles}>
+    <Flex direction="column">
       {label ? (
         <Text
           typography="t7"
@@ -59,9 +58,5 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(function Select(
     </Flex>
   )
 })
-
-const selectContainerStyles = css`
-  padding: 16px 24px 8px;
-`
 
 export default Select

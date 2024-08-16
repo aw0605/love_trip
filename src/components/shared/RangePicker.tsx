@@ -1,6 +1,12 @@
 import { DayPicker, DateRange, ModifiersStyles } from 'react-day-picker'
 import ko from 'date-fns/locale/ko'
-import { differenceInDays, format, isSameDay, parseISO } from 'date-fns'
+import {
+  addDays,
+  differenceInDays,
+  format,
+  isSameDay,
+  parseISO,
+} from 'date-fns'
 import styled from '@emotion/styled'
 import { colors } from '@styles/colorPalette'
 
@@ -12,16 +18,6 @@ interface RangePickerProps {
 
 function RangePicker({ startDate, endDate, onChange }: RangePickerProps) {
   const today = new Date()
-  const modifiers = {
-    disabled: { before: today },
-  }
-
-  const modifiersStyles: ModifiersStyles = {
-    disabled: {
-      color: colors.gray200,
-      backgroundColor: colors.gray100,
-    },
-  }
 
   const handleDayClick = (dateRange: DateRange | undefined) => {
     if (dateRange == null) {
@@ -55,8 +51,9 @@ function RangePicker({ startDate, endDate, onChange }: RangePickerProps) {
         defaultMonth={today}
         onSelect={handleDayClick}
         selected={selected}
-        modifiers={modifiers}
-        modifiersStyles={modifiersStyles}
+        disabled={{
+          before: addDays(new Date(), 1),
+        }}
       />
     </Container>
   )
