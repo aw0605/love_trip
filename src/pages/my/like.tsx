@@ -62,29 +62,6 @@ function LikePage() {
                 }}
                 data={data}
               />
-              {/* {data?.map((like, idx) => {
-                return (
-                  <Draggable key={like.id} draggableId={like.id} index={idx}>
-                    {(draggableProps) => (
-                      <li
-                        ref={draggableProps.innerRef}
-                        {...draggableProps.draggableProps}
-                        {...draggableProps.dragHandleProps}
-                      >
-                        <ListRow
-                          as="div"
-                          contents={
-                            <ListRow.Texts
-                              title={like.order}
-                              subTitle={like.hotelName}
-                            />
-                          }
-                        />
-                      </li>
-                    )}
-                  </Draggable>
-                )
-              })} */}
             </ul>
           )}
         </StrictModeDroppable>
