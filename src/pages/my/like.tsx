@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Virtuoso } from 'react-virtuoso'
 import useEditLike from '@components/my/like/hooks/useEditLike'
 import FixedBottomBtn from '@shared/FixedBottomBtn'
 import ListRow from '@shared/ListRow'
@@ -33,7 +34,35 @@ function LikePage() {
               ref={droppableProps.innerRef}
               {...droppableProps.droppableProps}
             >
-              {data?.map((like, idx) => {
+              <Virtuoso
+                useWindowScroll
+                increaseViewportBy={0}
+                itemContent={(idx, like) => {
+                  return (
+                    <Draggable key={like.id} draggableId={like.id} index={idx}>
+                      {(draggableProps) => (
+                        <li
+                          ref={draggableProps.innerRef}
+                          {...draggableProps.draggableProps}
+                          {...draggableProps.dragHandleProps}
+                        >
+                          <ListRow
+                            as="div"
+                            contents={
+                              <ListRow.Texts
+                                title={like.order}
+                                subTitle={like.hotelName}
+                              />
+                            }
+                          />
+                        </li>
+                      )}
+                    </Draggable>
+                  )
+                }}
+                data={data}
+              />
+              {/* {data?.map((like, idx) => {
                 return (
                   <Draggable key={like.id} draggableId={like.id} index={idx}>
                     {(draggableProps) => (
@@ -55,7 +84,7 @@ function LikePage() {
                     )}
                   </Draggable>
                 )
-              })}
+              })} */}
             </ul>
           )}
         </StrictModeDroppable>
