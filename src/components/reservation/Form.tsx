@@ -92,7 +92,7 @@ const VALIDATION_MESSAGE_MAP: {
     message: '한글명을 확인해주세요',
   },
   email: {
-    value: /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    value: /^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     message: '이메일 형식을 확인해주세요',
   },
   phone: {

@@ -1,4 +1,4 @@
-import { DayPicker, DateRange, ModifiersStyles } from 'react-day-picker'
+import { DayPicker, DateRange } from 'react-day-picker'
 import ko from 'date-fns/locale/ko'
 import {
   addDays,

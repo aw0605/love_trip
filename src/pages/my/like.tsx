@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import useEditLike from '@components/settings/like/hooks/useEditLike'
+import useEditLike from '@components/my/like/hooks/useEditLike'
 import FixedBottomBtn from '@shared/FixedBottomBtn'
 import ListRow from '@shared/ListRow'
 import {

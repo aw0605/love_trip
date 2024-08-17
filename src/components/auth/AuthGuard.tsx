@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { useSetRecoilState } from 'recoil'
+
 import { auth } from '@remote/firebase'
 import { userAtom } from '@store/atom/user'
 
@@ -18,8 +19,9 @@ function AuthGuard({ children }: { children: React.ReactNode }) {
         displayName: user.displayName ?? '',
         photoURL: user.photoURL ?? '',
       })
-      setInitialize(true)
     }
+
+    setInitialize(true)
   })
 
   if (initialize === false) {

@@ -7,9 +7,8 @@ import HotelListPage from '@pages/HotelList'
 import HotelPage from '@pages/Hotel'
 import TestPage from '@pages/Test'
 import SignInPage from '@pages/SignIn'
-import MyPage from '@pages/My'
-import SettingsPage from '@pages/settings'
-import LikePage from '@pages/settings/like'
+import MyPage from '@pages/my/index'
+import LikePage from '@pages/my/like'
 import SchedulePage from '@pages/Schedule'
 import ReservationPage from '@pages/Reservation'
 import ReservationDonePage from '@pages/ReservationDone'
@@ -67,15 +66,7 @@ function App() {
             }
           />
           <Route
-            path="/settings"
-            element={
-              <PrivateRoute>
-                <SettingsPage />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/settings/like"
+            path="/my/like"
             element={
               <PrivateRoute>
                 <LikePage />

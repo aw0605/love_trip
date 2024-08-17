@@ -31,15 +31,6 @@ function Navbar() {
               style={{ borderRadius: '100%' }}
             />
           </Link>
-          <Spacing size={15} direction="horizontal" />
-          <Link to="/settings">
-            <img
-              src="https://cdn1.iconfinder.com/data/icons/ionicons-outline-vol-2/512/settings-outline-64.png"
-              width={35}
-              height={35}
-              alt=""
-            />
-          </Link>
         </Flex>
       )
     }
