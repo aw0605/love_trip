@@ -6,6 +6,7 @@ import useUser from '@hooks/auth/useUser'
 import useRooms from './hooks/useRooms'
 import { useAlertContext } from '@contexts/AlertContext'
 import addDelimiter from '@utils/addDelimiter'
+import withSusepnse from '@shared/hocs/withSuspense'
 import Flex from '@shared/Flex'
 import Text from '@shared/Text'
 import ListRow from '@shared/ListRow'
@@ -114,4 +115,6 @@ const imageStyles = css`
   border-radius: 4px;
 `
 
-export default Rooms
+export default withSusepnse(Rooms, {
+  fallback: <div>객실 정보 불러오는 중...</div>,
+})
