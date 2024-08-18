@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { css } from '@emotion/react'
 import Button from './Button'
 import Flex from './Flex'
-import Spacing from './Spacing'
 
 import { colors } from '@styles/colorPalette'
 import useUser from '@hooks/auth/useUser'
@@ -47,7 +46,7 @@ function Navbar() {
 
   return (
     <Flex justify="space-between" align="center" css={NavbarContainerStyles}>
-      <Link to="/">홈</Link>
+      <Link to="/">Love Trip</Link>
       {renderBtn()}
     </Flex>
   )

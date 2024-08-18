@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom'
 import { css } from '@emotion/react'
 import useHotel from '@components/hotel/hooks/useHotel'
 import Top from '@shared/Top'
+import ScrollProgressBar from '@shared/ScrollProgressBar'
+import SEO from '@shared/SEO'
 import Carousel from '@components/hotel/Carousel'
 import Rooms from '@components/hotel/Rooms'
 import Contents from '@components/hotel/Contents'
@@ -9,7 +11,6 @@ import Map from '@components/hotel/Map'
 import RecommendHotels from '@components/hotel/RecommendHotels'
 import ActionBtns from '@components/hotel/ActionBtns'
 import Review from '@components/hotel/Review'
-import ScrollProgressBar from '@components/shared/ScrollProgressBar'
 
 function HotelPage() {
   const { id } = useParams() as { id: string }
@@ -24,6 +25,7 @@ function HotelPage() {
 
   return (
     <div>
+      <SEO title={name} description={comment} image={images[0]} />
       <ScrollProgressBar style={scrollProgressBarStyles} />
       <Top title={name} subTitle={comment} />
       <Carousel images={images} />
